@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<h1>Rankings</h1>
+
+<div class="MyDiv">
+{% for i in data%}
+
+		<h1><style text-color:"yellow">i</style></h1></h1><img src={{i}} alt="First"  width=30% height=auto> <br>
+
+{%  endfor %}
+</div>
+<a href="/"><button type="button" class="btn btn">Home</button></a>
+<a href="/ranking"><button type="button" class="btn btn">Girl's rankings</button></a>
+
+
+{%endblock%}

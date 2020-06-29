@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %}
+
+{% block content%}
+<h1>Left or Right?</h1>
+{% load static %}
+
+
+<img src={{a}} alt="First"  width=40% height=auto> 
+<img src={{b}} alt="Second"  width=40% height = auto>
+<form method="POST" >
+{% csrf_token%}
+<a href=""><button type="submit" class="btn btn1" id="one" name='first' value={{a}} formmethod="POST">Vote</button></a>
+<a href=""><button type="submit" class="btn btn2" id="two" name='second' value={{b}} formmethod="POST">Vote</button></a>
+</form>
+
+<a href="/"><button type="button" class="btn btn">Home</button></a>
+<a href="/ranking2"><button type="button" class="btn btn">Boy's rankings</button></a>
+<a href="/ranking"><button type="button" class="btn btn">Girl's rankings</button></a>
+
+{%endblock%}
